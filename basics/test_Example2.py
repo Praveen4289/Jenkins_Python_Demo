@@ -8,6 +8,7 @@ def test_initbrowser():
     driver=webdriver.Chrome(service=s)
     driver.get("http://www.fb.com")
     driver.maximize_window()
+    driver.implicitly_wait(30)
     actual_title=driver.title
     assert actual_title=="Facebook – log in or sign up"
     driver.close()
